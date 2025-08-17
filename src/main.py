@@ -5,6 +5,9 @@ from src.order.order_delivery import OrderDelivery
 # from src.payment.payment_card import PaymentCard
 # from src.payment.payment_pix import PaymentPIX
 from src.payment.payment_factory import PaymentFactory
+# from notification.notification_email import NotificationEmail
+# from notification.notification_sms import NotificationSMS
+from src.notification.notification_facade import NotificationFacade
 
 client = Client("Leonardo", "123 Main St")
 item_1 = Item("Arroz", 9)
@@ -25,3 +28,11 @@ print(f"Preço total com delivery: {amount_order:.2f}")
 # with factory design
 type_payment = "cartao"
 payment = PaymentFactory.create_payment(type_payment).process_payment(amount_order)
+
+MESSAGE = "Seu pedido saiu para entrega"
+# Notify_email = NotificationEmail().send_notify(client, MESSAGE)
+# Notify_sms = NotificationSMS().send_notify(client, MESSAGE)
+
+# with facade design
+notifications = NotificationFacade().send_notifications(client, MESSAGE)
+
