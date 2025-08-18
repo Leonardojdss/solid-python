@@ -2,6 +2,8 @@
 
 Este projeto demonstra a implementação de um sistema de pedidos em Python aplicando diversos **Design Patterns** e os princípios **SOLID** de programação orientada a objetos.
 
+* Testes unitários sendo criados
+
 ## � Índice
 
 - [Visão Geral](#visão-geral)
