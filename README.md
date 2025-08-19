@@ -45,7 +45,7 @@ class PaymentPIX(Payment):
         print(f"Processing PIX payment of R$: {amount:.2f}.")
 ```
 
-### 2. **Factory Pattern**
+### 2. **Factory method**
 **Localização:** `src/payment/payment_factory.py`
 
 O Factory Pattern é usado para criar instâncias de diferentes tipos de pagamento sem expor a lógica de criação ao cliente.
